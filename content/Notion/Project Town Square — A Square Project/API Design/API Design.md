@@ -1,3 +1,0 @@
-## RewardsEcosystem
-
-[[API]]
