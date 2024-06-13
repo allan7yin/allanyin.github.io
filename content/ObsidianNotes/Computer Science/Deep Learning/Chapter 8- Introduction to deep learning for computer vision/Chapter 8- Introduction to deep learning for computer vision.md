@@ -127,13 +127,7 @@ This is exactly what has been shown above, except as 3D tensors. First, we have 
 
 - Look at the left-most input patch → this is a (3,3,2) tensor. This then multiplies (tensor dot-product) with every such shape in the input feature map (showed in the slightly greyed out image above). This operation results in a (3,3,1) shape.
 - This is repeated with the other filters, hence why the output feature map is a (3,3,3) tensor.
-
-  
-
 ---
-
-  
-
 ### Max-Pooling Operation
 
 After convolution layer, we often apply whats known as a **max-pooling operation**. So, what is this? Essentially, a max-pooling operation aims to reduce the dimensions of the feature map, while capturing the most important features in the feature map. Consider the following image:
@@ -197,13 +191,9 @@ Having to train an image-classification model using very little data is a common
 
 In the next section, we will look at 2 more essential techniques for applying deep learning models to small datasets: **feature extraction with a** _**pre-trained model**_ as well as _**fine-tuning a pre-trained model.**_
 
-  
-
 Together, these 3 strategies — training a small model from scratch, doing feature extraction using a pre-trained model, and fine-tuning a pre-trained model — will constitute our **toolbox** for tackling the problem of performing image classification with small datasets.
 
 > deep learning models are by nature highly repurposable: you can take, say, an image-classification or speech-to-text model trained on a large-scale data- set and reuse it on a significantly different problem with only minor changes. Specifically, in the case of computer vision, many pre-trained models (usually trained on the ImageNet dataset) are now publicly available for download and can be used to boot-strap powerful vision models out of very little data. This is one of the greatest strengths of deep learning: feature reuse.
-
-  
 
 Now, let’s download the dataset → found on Kaggle:
 
@@ -298,8 +288,6 @@ So, we now have a basic model built out. The next step is processing our images 
 5. Pack them into batches (we’ll use 180x180)
 6. Pack them into batches (we’ll use batches of 32 images)
 
-  
-
 Luckily, Keras has utilities to take care of these steps automatically through the utility function `image_dataset_from_directory()`, which let’s you quickly set up a data pipeline that can automatically turn image files into batches of pre-processed tensors:
 
 ```Python
@@ -327,7 +315,6 @@ test_dataset = image_dataset_from_directory(
 
 Tensorflow makes available the `tf.data` API to create efficient input pipelines for machine learning models. Its core class is `tf.fata.Dataset`. A `Dataset` is an iterator: you can use it in a `for` loop. It will typically return batches of input data and labels. You can pass a `Dataset` object directly to the `fit()` method of a `Keras` model.
 
-  
 
 The Dataset class handles many key features that would otherwise be cumbersome to implement yourself—in particular, asynchronous data prefetching (preprocessing the next batch of data while the previous one is being handled by the model, which keeps execution flowing without interruptions). You can look this more later.
 
