@@ -1,0 +1,1 @@
+This lecture focused on the slides, on iPad.
