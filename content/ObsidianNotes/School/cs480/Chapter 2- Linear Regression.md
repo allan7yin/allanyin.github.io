@@ -1,7 +1,5 @@
 Let’s first start off with what is regression. Broadly, regression is a practice used to analyze the relationships between variables, specifically and **independent variable** and a **dependent variable**. When we perform regression in machine learning, we are, given a dataset, trying to predict future values. For example, say we have are trying to predict housing data from some other data such as crime rate, education etc. Solving this problem is regression, and we will see in this chapter, how we can create models to predict on this for us.
 
-  
-
 💡 **Idea: Given a training data** **$(x_i, y_i)$**﻿**, find a function** **$f: X \rightarrow Y$**﻿**, such that** **$f(x_i) \approx y_i$**﻿ **where**
 
 1. $x_i \in \R^d$﻿: the feature vector for the $i^{th}$﻿ training example

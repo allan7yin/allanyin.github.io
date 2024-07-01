@@ -105,7 +105,7 @@ Now, a couple things to note about this:
 
 So, what does this mean? We interpret this as the velocity is a weighted average of old velocity + some multiple of the gradient, where we usually choose $\gamma \lt 1$. For example, say we make $\gamma = 0.9$, this would mean we define the current velocity to be 90% of old velocity + 10% of the new gradient. 
 
-![[Screenshot 2024-06-12 at 10.30.17 PM.png | 300]]
+![[Screenshot 2024-06-12 at 10.30.17 PM.png]]
 
 Look at this diagram, this illustrates why we need momentum. Without momentum, gradient updates would take the black line. With momentum, give more weight to the trajectory of the direction. 
 

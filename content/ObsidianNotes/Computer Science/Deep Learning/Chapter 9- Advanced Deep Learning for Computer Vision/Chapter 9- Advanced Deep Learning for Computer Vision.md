@@ -380,8 +380,6 @@ With residual connections, you can build networks of arbitrary depth, without ha
 
 _Normalization_ is a broad category of methods that seek to make different samples seen by a machine learning model more similar to each other, which helps the model learn and generalize well to new data. The most common form of data normalization is one you’ve already seen several times in this book: **centring the data on zero by subtracting the mean from the data and then dividing by the standard deviation**. In effect, this makes the assumption that the data follows a normal (or Gaussian) distribution.
 
-  
-
 Now previously, we’ve looked at instances where we’ve normalized data **before** feeding it into a model. However, data normalization may be of interest after every transformation operated by the network: **even if the data entering a** `**Dense**` **or** `**Conv2D**` **network has a 0 mean and unit variance**, there’s no reason to expect that this will be the case for the data coming out. In this case, _could normalizing intermediate activations help?_ This is what **batch normalization** is doing.
 
 - This is done through `BatchNormalization` layer in Keras
@@ -475,7 +473,6 @@ So, two in the left are the same, and the right diagram demonstrates how they ha
 ==When using== ==**separable convolutional layers**====, we are making one important assumption: “feature channels are largely independent”. If this does not hold, we should not consider using them.==
 
 ---
-
 ### Putting it Together: A mini Xception-like model
 
 As a reminder, here are the convent architecture principles you’ve learned so far:

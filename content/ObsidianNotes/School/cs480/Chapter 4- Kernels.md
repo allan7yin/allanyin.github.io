@@ -43,11 +43,11 @@ $\langle x, Qx \rangle$
 
 Note that in the above, Now, we can re-arrange this lengthy summation expression. Namely:
 
-![[Screenshot_2024-06-12_at_9.02.09_AM.png]]
+![[Screenshot_2024-06-12_at_9.02.09_AM.png | 500]]
 
 When we flatten, we are stacking the column vectors of the the matrix on top of each other, forming a $\R^{d^2}$﻿ vector. So, the above summation can be expressed as $\langle x, Qx \rangle = x^TQx = \langle \vec{xx^T}, \vec{Q} \rangle$﻿. Now, we can write the quadratic classifier as the inner product of a feature map and parameter vector:
 
-![[Screenshot_2024-06-12_at_9.09.59_AM.png]]
+![[Screenshot_2024-06-12_at_9.09.59_AM.png | 500]]
 
 Where again, we’re stacking these vectors vertically to create new higher dimension vectors. So, the quadratic classifier becomes $\langle \phi(x), W \rangle$﻿. Now, the feature map blows up the dimension, as we are performing a $\phi: \R^d \rightarrow \R^{d^2 + d + 1}$﻿ transformation.
 
@@ -66,7 +66,7 @@ $\begin{array}{ll}$
 
 ==**Notice that in the above, we have now added phi to the data points**==**.** Now, we know:
 
-$ \phi(x) = \begin{pmatrix} \vec{xx^T} \\ \sqrt2x \\ 1 \end{pmatrix}$﻿
+$\phi(x) = \begin{pmatrix} \vec{xx^T} \\ \sqrt2x \\ 1 \end{pmatrix}$
 
 So, if we compute $\langle \phi(x),\phi(x') \rangle$﻿ naively, then we would need $O(d^2)$﻿ time. But, observe:
 
@@ -80,11 +80,7 @@ Now why is this useful? As seen, we only need to compute inner product between t
 
 We call $k: \R^d \text{ x } \R^d \rightarrow \R$﻿ a kernel if there exists some feature map $\phi: \R^d \rightarrow \R^H$﻿ (some higher dimension, usually) such that $\langle \phi(x), \phi(x') \rangle = k(x, x')$﻿, _i.e a simple way to represent the inner product of the feature maps of any 2 vectors._ This is especially useful in sitations when $\phi(x)$﻿ is incredibly high dimension, and would then take incredible computation time, but $k $﻿ is not.
 
-  
-
 Now, we are familiar with 2D and 3D vector spaces, where operations like inner and outer product are defined. Now, generalizing this to higher dimensions, we call this a **Hilbert Space**. Think of a Hilbert space as an extension of our usual spaces to infinite dimensions, equipped with tools (like the inner product) to measure lengths and angles, and ensuring that all expected limits are included in the space.
-
-  
 
 ==**→ Reproducing Kernel Hilbert Space (RKHS)**==
 

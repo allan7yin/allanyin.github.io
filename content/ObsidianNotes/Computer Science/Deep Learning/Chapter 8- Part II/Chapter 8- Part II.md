@@ -305,10 +305,6 @@ We’ve already done the first 3 → Let’s finish the last 2
 
 - We’ll fine-tune the last 3 convolutional layers (so `conv block 5`)
 
-  
-
-  
-
 So, if we’re going to be first training the entire model with the convolutional base frozen, why don’t we then just unfreeze everything, and fine-tune the entire convolutional base. **_Technically, we could, but you need to consider:_**
 
 - Earlier layers are more generic features → more useful to fine-tune higher layers as these encode more specialized features
@@ -342,7 +338,6 @@ history = model.fit(
 Here, we get a test accuracy of `98.5%`. This would one of the top submissions for this original competition, although an unfair comparison, since in the original competition, pre-trained models were not already trained on images such as cats and dogs (VGG16 is).
 
 ---
-
 ### Summary
 
 - Convnets are the best type of machine learning models for computer vision tasks. It’s possible to train one from scratch even on a very small dataset, with decent results.
